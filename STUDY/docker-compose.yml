@@ -1,0 +1,7 @@
+version: "3.7" 
+services:
+  biela_run:
+    image: quay.io/tianyikillua/code_aster
+    container_name: biela_run
+    volumes:
+      - .:/home/aster/shared

@@ -1,0 +1,156 @@
+DEBUT(LANG="EN")
+
+E = 210000000000  # Pa 205GPa
+# E = 1e20
+RHO = 7850  # kg/m3
+NU = 0.3
+
+BOLT_AREA = 2207.8 * 1e-6
+PRELOAD = 2 * 76600 / BOLT_AREA  # N
+
+TOGGLE_LOADS = 0
+
+AREA_A = 20265 * 1e-6  # m**2
+AREA_B = 32603 * 1e-6  # m**2
+
+LOAD_A = [TOGGLE_LOADS * (-330548 / AREA_A), TOGGLE_LOADS * (-364856 / AREA_A)]  # N
+LOAD_B = [TOGGLE_LOADS * 330548 / AREA_B, TOGGLE_LOADS * 207453 / AREA_B]  # N
+
+ACC_EX = 0
+ACC_EY = 0
+ACC_EZ = 0
+
+
+mesh = LIRE_MAILLAGE(identifier="0:1", UNITE=20)
+
+model = AFFE_MODELE(
+    identifier="1:1",
+    AFFE=_F(MODELISATION=("3D",), PHENOMENE="MECANIQUE", TOUT="OUI"),
+    MAILLAGE=mesh,
+)
+
+mater = DEFI_MATERIAU(identifier="2:1", ELAS=_F(E=E, NU=NU, RHO=RHO))
+
+fieldmat = AFFE_MATERIAU(
+    identifier="3:1", AFFE=_F(MATER=(mater,), TOUT="OUI"), MAILLAGE=mesh, MODELE=model
+)
+
+load = AFFE_CHAR_MECA(
+    DDL_IMPO=(
+        _F(DX=0.0, DY=0.0, DZ=0.0, GROUP_NO=("PF1",)),
+        _F(DX=0.0, DZ=0.0, GROUP_NO=("PF2",)),
+        _F(DZ=0.0, GROUP_NO=("LPF",)),
+    ),
+    MODELE=model,
+    #     PESANTEUR=_F(DIRECTION=(-0.19, 0.0, -0.98), GRAVITE=TOGGLE_ACCEL * ACCEL),
+)
+
+RA = AFFE_CHAR_MECA(
+    identifier="6:1",
+    MODELE=model,
+    FORCE_FACE=_F(FZ=LOAD_A[0], FX=LOAD_A[1], GROUP_MA=("RA",)),
+)
+
+RB = AFFE_CHAR_MECA(
+    identifier="7:1",
+    MODELE=model,
+    FORCE_FACE=_F(FZ=LOAD_B[0], FX=LOAD_B[1], GROUP_MA=("RB",)),
+)
+
+pc_0 = AFFE_CHAR_MECA(
+    identifier="8:1", FORCE_FACE=_F(FZ=PRELOAD, GROUP_MA=("PC1",)), MODELE=model
+)
+
+pc_1 = AFFE_CHAR_MECA(
+    identifier="9:1", FORCE_FACE=_F(FZ=PRELOAD, GROUP_MA=("PC2",)), MODELE=model
+)
+pc_2 = AFFE_CHAR_MECA(
+    identifier="10:1", FORCE_FACE=_F(FZ=-PRELOAD, GROUP_MA=("PC3",)), MODELE=model
+)
+pc_3 = AFFE_CHAR_MECA(
+    identifier="11:1", FORCE_FACE=_F(FZ=-PRELOAD, GROUP_MA=("PC4",)), MODELE=model
+)
+
+# definition inertia loads
+F_X = FORMULE(
+    VALE="(ACC_EY*sqrt(X*X+Z*Z)*cos(atan2(X,Z))*(RHO))*(-1)+(ACC_EZ*sqrt(X*X+Y*Y)*sin(atan2(Y,X))*(RHO))",
+    NOM_PARA=(
+        "X",
+        "Y",
+        "Z",
+    ),
+    ACC_EY=ACC_EY,
+    ACC_EZ=ACC_EZ,
+    RHO=RHO,
+)
+F_Y = FORMULE(
+    VALE="(ACC_EX*sqrt(Y*Y+Z*Z)*sin(atan2(Z,Y))*(RHO))+(ACC_EZ*sqrt(X*X+Y*Y)*cos(atan2(Y,X))*(RHO))*(-1)",
+    NOM_PARA=(
+        "X",
+        "Y",
+        "Z",
+    ),
+    ACC_EX=ACC_EX,
+    ACC_EZ=ACC_EZ,
+    RHO=RHO,
+)
+
+F_Z = FORMULE(
+    VALE="(ACC_EX*sqrt(Y*Y+Z*Z)*cos(atan2(Z,Y))*(RHO))*(-1)+(ACC_EY*sqrt(X*X+Z*Z)*sin(atan2(X,Z))*(RHO))",
+    NOM_PARA=(
+        "X",
+        "Y",
+        "Z",
+    ),
+    ACC_EY=ACC_EY,
+    ACC_EX=ACC_EX,
+    RHO=RHO,
+)
+
+ACC_ANG = AFFE_CHAR_MECA_F(
+    MODELE=model,
+    FORCE_INTERNE=(
+        _F(
+            TOUT="OUI",
+            FY=F_Y,
+            FZ=F_Z,
+        ),
+    ),
+)
+
+reslin = MECA_STATIQUE(
+    identifier="12:1",
+    CHAM_MATER=fieldmat,
+    EXCIT=(
+        _F(CHARGE=load),
+        _F(CHARGE=pc_0),
+        _F(CHARGE=pc_1),
+        _F(CHARGE=pc_2),
+        _F(CHARGE=pc_3),
+        _F(CHARGE=RA),
+        _F(CHARGE=RB),
+        _F(CHARGE=ACC_ANG),
+    ),
+    MODELE=model,
+)
+
+equiv = CALC_CHAMP(
+    identifier="13:1",
+    CONTRAINTE=("SIGM_ELNO", "SIGM_NOEU"),
+    DEFORMATION=("EPSI_NOEU",),
+    FORCE=("REAC_NODA",),
+    CRITERES=("SIEQ_NOEU",),
+    RESULTAT=reslin,
+)
+
+
+IMPR_RESU(
+    identifier="14:1",
+    RESU=(
+        _F(NOM_CHAM=("DEPL", "SIGM_NOEU", "SIGM_ELNO", "EPSI_NOEU"), RESULTAT=equiv),
+        _F(NOM_CHAM=("SIEQ_NOEU", "REAC_NODA"), RESULTAT=equiv),
+    ),
+    UNITE=80,
+)
+
+FIN()

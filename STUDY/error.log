@@ -1,0 +1,905 @@
+
+>>> 2023/06/16-15:11:02.484  [start@/home/aster/aster/lib/python3.6/site-packages/asrun/main.py:71]
+Command line run on '7d9b8f8694eb'
+using python executable '/usr/bin/python3' :
+['/home/aster/aster/bin/as_run', 'export']
+
+>>> 2023/06/16-15:11:02.484  [__init__@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:194]
+AsterSystem param :
+{'remote_copy_protocol': 'SCP', 'remote_shell_protocol': 'SSH'}
+
+>>> 2023/06/16-15:11:02.485  [Shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> 7d9b8f8694eb and aster <> aster) ? False
+
+>>> 2023/06/16-15:11:02.485  [GetMemInfo@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:877]
+cmd :
+cat /proc/meminfo
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.489  [GetMemInfo@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:884]
+GetMemInfo 'memtotal' returns : 7886
+
+>>> 2023/06/16-15:11:02.490  [Shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> 7d9b8f8694eb and aster <> aster) ? False
+
+>>> 2023/06/16-15:11:02.490  [GetCpuInfo@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:855]
+cmd :
+cat /proc/cpuinfo
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.492  [GetCpuInfo@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:863]
+GetCpuInfo 'numcpu' returns : 6
+
+>>> 2023/06/16-15:11:02.492  [get_limits@/home/aster/aster/lib/python3.6/site-packages/asrun/common_func.py:177]
+Limits returned :
+{'interactif_memmax': 7886,
+ 'interactif_mpi_nbpmax': 32,
+ 'interactif_nbpmax': 6,
+ 'interactif_tpsmax': '9999:00:00'}
+
+>>> 2023/06/16-15:11:02.493  [get_limits@/home/aster/aster/lib/python3.6/site-packages/asrun/common_func.py:177]
+Limits returned :
+{'batch_memmax': 7886,
+ 'batch_mpi_nbpmax': 32,
+ 'batch_nbpmax': 6,
+ 'batch_tpsmax': '9999:00:00'}
+
+>>> 2023/06/16-15:11:02.493  [PostConf@/home/aster/aster/lib/python3.6/site-packages/asrun/run.py:583]
+installation dirs (aster_root, confdir, localedir, LANG)
+/home/aster/aster
+/home/aster/aster/etc/codeaster
+/home/aster/aster/share/locale
+C.UTF-8
+
+>>> 2023/06/16-15:11:02.494  [RunAster@/home/aster/aster/lib/python3.6/site-packages/asrun/execute.py:152]
+source list : ('export',)
+destination : /tmp/astk_aster/aster-7d9b8f8694eb-profil_astk_767
+
+>>> 2023/06/16-15:11:02.494  [RunAster@/home/aster/aster/lib/python3.6/site-packages/asrun/execute.py:152]
+cmd :
+cp -L -r export /tmp/astk_aster/aster-7d9b8f8694eb-profil_astk_767
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.498  [_dbg@/home/aster/aster/lib/python3.6/site-packages/asrun/profil.py:46]
+P memory_limit: 7000.0    P memjob: 7168000    A memjeveux: 875.0
+
+>>> 2023/06/16-15:11:02.498  [_dbg@/home/aster/aster/lib/python3.6/site-packages/asrun/profil.py:46]
+P time_limit: 900.0    P tpsjob: 16    A tpmax: 900.0
+
+>>> 2023/06/16-15:11:02.500  [_dbg@/home/aster/aster/lib/python3.6/site-packages/asrun/profil.py:46]
+P memory_limit: 7000.0    P memjob: 7168000    A memjeveux: 875.0
+
+>>> 2023/06/16-15:11:02.500  [_dbg@/home/aster/aster/lib/python3.6/site-packages/asrun/profil.py:46]
+P time_limit: 900.0    P tpsjob: 16    A tpmax: 900.0
+
+>>> 2023/06/16-15:11:02.500  [RunAster@/home/aster/aster/lib/python3.6/site-packages/asrun/execute.py:161]
+Input export : /tmp/astk_aster/aster-7d9b8f8694eb-profil_astk_767
+AsterProfil object   = 0x7f07aef87a90
+.filename            = /tmp/astk_aster/aster-7d9b8f8694eb-profil_astk_767
+P actions make_etude
+P debug nodebug
+P memjob 7168000
+P memory_limit 7000.0
+P mode interactif
+P mpi_nbcpu 1
+P mpi_nbnoeud 1
+P nomjob RunCase_2_Stage_1
+P origine AsterStudy 0.11
+P rep_trav /tmp/aster-f3fd93e590e8-interactif_29
+P studyid 412-0002-DESKTOP-RK7JD3A
+P time_limit 900.0
+P tpsjob 16
+P version stable
+A memjeveux 875.0
+A tpmax 900.0
+F comm /home/aster/shared/RUN.comm D  1
+F libr /home/aster/shared/BIELA_MALLA.med D  20
+F libr /home/aster/shared/RESULTADOS.med D  80
+F libr /home/aster/shared/BIELA_MALLA.med R  20
+F mess /home/aster/shared/message R  6
+R base /home/aster/shared/base-stage1 RC 0
+
+
+>>> 2023/06/16-15:11:02.501  [AsterBuild@/home/aster/aster/lib/python3.6/site-packages/asrun/build.py:1421]
+version supports: ('orbinitref', 'waf', 'noresu', 'use_numthreads', 'nocopy')
+
+>>> 2023/06/16-15:11:02.501  [Shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> 7d9b8f8694eb and aster <> aster) ? False
+
+>>> 2023/06/16-15:11:02.501  [AddToEnv@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:806]
+cmd :
+bash -c env
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.504  [AddToEnv@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:807]
+env_init
+LC_ALL=C.UTF-8
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LD_LIBRARY_PATH=/usr/lib:/home/aster/aster/public/tfel-3.2.1/lib:/usr/lib
+LESSCLOSE=/usr/bin/lesspipe %s %s
+_=/usr/bin/env
+LANG=C.UTF-8
+SCALAPACK_SRC=http://www.netlib.org/scalapack/scalapack-2.0.2.tgz
+MUMPS_SRC=mumps-5.1.2-aster6.tar.gz
+HOSTNAME=7d9b8f8694eb
+PUBLIC=/home/aster/aster/public
+WISHEXECUTABLE=/usr/bin/wish
+ASTER_TMPDIR=/tmp
+ASTER_ROOT=/home/aster/aster
+HDF5_VER=1.10.3
+PYTHONEXECUTABLE=/usr/bin/python3
+MED_VER=4.0.0
+PETSC_SRC=http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.9.4.tar.gz
+SCOTCH_SRC=scotch-6.0.4-aster7.tar.gz
+ASTER_ETC=/home/aster/aster/etc
+PETSC_VER=3.9.4
+USER=aster
+INITRD=no
+PWD=/home/aster/shared
+HOME=/home/aster
+LC_CTYPE=en_US.UTF-8
+UID=1000
+ASTER_VERSION_DIR=/home/aster/aster/14.4/share/aster
+DEBIAN_FRONTEND=teletype
+ASTER_FULL_SRC=https://code-aster.org/FICHIERS/aster-full-src-14.4.0-1.noarch.tar.gz
+PARMETIS_VER=4.0.3
+MUMPS_VER=5.1.2
+METIS_VER=5.1.0
+SCALAPACK_VER=2.0.2
+TERM=xterm
+SHLVL=4
+LANGUAGE=C.UTF-8
+PYTHONPATH=/home/aster/aster/lib/python3.6/site-packages:/home/aster/aster/public/tfel-3.2.1/lib/python/site-packages:/home/aster/aster/lib/python3.6/site-packages
+SCOTCH_VER=6.0.4
+PATH=/home/aster/aster/bin:/home/aster/aster/outils:/home/aster/aster/public/tfel-3.2.1/bin:/home/aster/aster/bin:/home/aster/aster/outils:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+MFRONT_VER=3.2.1
+ASTER_VER=14.4
+PARMETIS_SRC=http://glaros.dtc.umn.edu/gkhome/fetch/sw/parmetis/parmetis-4.0.3.tar.gz
+LESSOPEN=| /usr/bin/lesspipe %s
+ASTER_SRC=aster-14.4.0.tgz
+
+
+>>> 2023/06/16-15:11:02.505  [Shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> 7d9b8f8694eb and aster <> aster) ? False
+
+>>> 2023/06/16-15:11:02.505  [AddToEnv@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:813]
+cmd :
+bash -c ". /home/aster/aster/14.4/share/aster/profile.sh && env"
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.516  [AddToEnv@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:814]
+env_prof
+LC_ALL=C.UTF-8
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LD_LIBRARY_PATH=.:/home/aster/aster/14.4/lib/aster:/home/aster/aster/public/hdf5-1.10.3/lib:/home/aster/aster/public/med-4.0.0/lib:/home/aster/aster/public/mumps-5.1.2/lib:/home/aster/aster/public/metis-5.1.0/lib:/home/aster/aster/public/tfel-3.2.1/lib:/home/aster/aster/public/scotch-6.0.4/lib:/home/aster/aster/public/hdf5-1.10.3/lib64:/home/aster/aster/public/med-4.0.0/lib64:/home/aster/aster/14.4/lib:/tmp/aster_full:/usr:/usr/lib/gcc/x86_64-linux-gnu/7:/usr/local/lib:/usr/lib/x86_64-linux-gnu:/home/aster/aster/public/tfel-3.2.1:/home/aster/aster/14.4/lib/aster:/usr/lib:/home/aster/aster/public/tfel-3.2.1/lib:/usr/lib
+ASTER_LIBDIR=/home/aster/aster/14.4/lib/aster
+PYTHONHOME=/usr
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LANG=C.UTF-8
+SCALAPACK_SRC=http://www.netlib.org/scalapack/scalapack-2.0.2.tgz
+MUMPS_SRC=mumps-5.1.2-aster6.tar.gz
+HOSTNAME=7d9b8f8694eb
+PUBLIC=/home/aster/aster/public
+WISHEXECUTABLE=/usr/bin/wish
+ASTER_TMPDIR=/tmp
+ASTER_ROOT=/home/aster/aster
+HDF5_VER=1.10.3
+PYTHONEXECUTABLE=/usr/bin/python3
+MED_VER=4.0.0
+PETSC_SRC=http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-3.9.4.tar.gz
+SCOTCH_SRC=scotch-6.0.4-aster7.tar.gz
+ASTER_ETC=/home/aster/aster/etc
+PETSC_VER=3.9.4
+ASTER_ELEMENTSDIR=/home/aster/aster/14.4/lib/aster
+USER=aster
+INITRD=no
+ASTER_DATADIR=/home/aster/aster/14.4/share/aster
+PWD=/home/aster/shared
+HOME=/home/aster
+ASTER_LOCALEDIR=/home/aster/aster/14.4/share/locale/aster
+LC_CTYPE=en_US.UTF-8
+UID=1000
+ASTER_VERSION_DIR=/home/aster/aster/14.4/share/aster
+DEBIAN_FRONTEND=teletype
+ASTER_FULL_SRC=https://code-aster.org/FICHIERS/aster-full-src-14.4.0-1.noarch.tar.gz
+PARMETIS_VER=4.0.3
+MUMPS_VER=5.1.2
+METIS_VER=5.1.0
+SCALAPACK_VER=2.0.2
+TERM=xterm
+SHLVL=4
+LANGUAGE=C.UTF-8
+PYTHONPATH=.:/home/aster/aster/14.4/lib/aster:/tmp/aster_full:/home/aster/aster/lib/python3.6/site-packages:/home/aster/aster/public/tfel-3.2.1/lib/python3.6/site-packages:/usr/lib/python3/dist-packages:/home/aster/aster/lib/python3.6/site-packages:/home/aster/aster/public/tfel-3.2.1/lib/python/site-packages:/home/aster/aster/lib/python3.6/site-packages
+SCOTCH_VER=6.0.4
+PATH=/usr/bin:/home/aster/aster/bin:/home/aster/aster/outils:/home/aster/aster/public/tfel-3.2.1/bin:/home/aster/aster/bin:/home/aster/aster/outils:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+MFRONT_VER=3.2.1
+ASTER_VER=14.4
+PARMETIS_SRC=http://glaros.dtc.umn.edu/gkhome/fetch/sw/parmetis/parmetis-4.0.3.tar.gz
+LESSOPEN=| /usr/bin/lesspipe %s
+ASTER_SRC=aster-14.4.0.tgz
+_=/usr/bin/env
+
+
+>>> 2023/06/16-15:11:02.516  [AddToEnv@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : LD_LIBRARY_PATH=.:/home/aster/aster/14.4/lib/aster:/home/aster/aster/public/hdf5-1.10.3/lib:/home/aster/aster/public/med-4.0.0/lib:/home/aster/aster/public/mumps-5.1.2/lib:/home/aster/aster/public/metis-5.1.0/lib:/home/aster/aster/public/tfel-3.2.1/lib:/home/aster/aster/public/scotch-6.0.4/lib:/home/aster/aster/public/hdf5-1.10.3/lib64:/home/aster/aster/public/med-4.0.0/lib64:/home/aster/aster/14.4/lib:/tmp/aster_full:/usr:/usr/lib/gcc/x86_64-linux-gnu/7:/usr/local/lib:/usr/lib/x86_64-linux-gnu:/home/aster/aster/public/tfel-3.2.1:/home/aster/aster/14.4/lib/aster:/usr/lib:/home/aster/aster/public/tfel-3.2.1/lib:/usr/lib
+
+>>> 2023/06/16-15:11:02.516  [AddToEnv@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : ASTER_LIBDIR=/home/aster/aster/14.4/lib/aster
+
+>>> 2023/06/16-15:11:02.516  [AddToEnv@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : PYTHONHOME=/usr
+
+>>> 2023/06/16-15:11:02.516  [AddToEnv@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : ASTER_ELEMENTSDIR=/home/aster/aster/14.4/lib/aster
+
+>>> 2023/06/16-15:11:02.516  [AddToEnv@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : ASTER_DATADIR=/home/aster/aster/14.4/share/aster
+
+>>> 2023/06/16-15:11:02.516  [AddToEnv@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : ASTER_LOCALEDIR=/home/aster/aster/14.4/share/locale/aster
+
+>>> 2023/06/16-15:11:02.516  [AddToEnv@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : PYTHONPATH=.:/home/aster/aster/14.4/lib/aster:/tmp/aster_full:/home/aster/aster/lib/python3.6/site-packages:/home/aster/aster/public/tfel-3.2.1/lib/python3.6/site-packages:/usr/lib/python3/dist-packages:/home/aster/aster/lib/python3.6/site-packages:/home/aster/aster/public/tfel-3.2.1/lib/python/site-packages:/home/aster/aster/lib/python3.6/site-packages
+
+>>> 2023/06/16-15:11:02.517  [AddToEnv@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : PATH=/usr/bin:/home/aster/aster/bin:/home/aster/aster/outils:/home/aster/aster/public/tfel-3.2.1/bin:/home/aster/aster/bin:/home/aster/aster/outils:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+>>> 2023/06/16-15:11:02.517  [RunAster@/home/aster/aster/lib/python3.6/site-packages/asrun/execute.py:201]
+set_rep_trav(/tmp/aster-f3fd93e590e8-interactif_29) > local=/tmp/aster-f3fd93e590e8-interactif_29, global=/tmp/aster-f3fd93e590e8-interactif_29
+
+>>> 2023/06/16-15:11:02.518  [_dbg@/home/aster/aster/lib/python3.6/site-packages/asrun/profil.py:46]
+P memory_limit: 7000.0    P memjob: 7168000    A memjeveux: 875.0
+
+>>> 2023/06/16-15:11:02.518  [_dbg@/home/aster/aster/lib/python3.6/site-packages/asrun/profil.py:46]
+P time_limit: 900.0    P tpsjob: 16    A tpmax: 900.0
+
+>>> 2023/06/16-15:11:02.519  [RunAster@/home/aster/aster/lib/python3.6/site-packages/asrun/execute.py:208]
+source list : ('/tmp/astk_aster/aster-7d9b8f8694eb-profil_astk_767',)
+destination : export
+
+>>> 2023/06/16-15:11:02.519  [RunAster@/home/aster/aster/lib/python3.6/site-packages/asrun/execute.py:208]
+cmd :
+cp -L -r /tmp/astk_aster/aster-7d9b8f8694eb-profil_astk_767 export
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.523  [RunAster@/home/aster/aster/lib/python3.6/site-packages/asrun/execute.py:221]
+source list : ('/tmp/astk_aster/aster-7d9b8f8694eb-profil_astk_767',)
+destination : /tmp/aster-f3fd93e590e8-interactif_29/767.export
+
+>>> 2023/06/16-15:11:02.523  [RunAster@/home/aster/aster/lib/python3.6/site-packages/asrun/execute.py:221]
+cmd :
+cp -L -r /tmp/astk_aster/aster-7d9b8f8694eb-profil_astk_767 /tmp/aster-f3fd93e590e8-interactif_29/767.export
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.526  [RunAster@/home/aster/aster/lib/python3.6/site-packages/asrun/execute.py:402]
+Start make_etude/make_env/make_dbg action
+
+>>> 2023/06/16-15:11:02.527  [copyfileD@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:574]
+source list : ('/home/aster/shared/RUN.comm',)
+destination : fort.1.1
+
+>>> 2023/06/16-15:11:02.527  [copyfileD@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:574]
+cmd :
+cp -L -r /home/aster/shared/RUN.comm fort.1.1
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.531  [Shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> 7d9b8f8694eb and aster <> aster) ? False
+
+>>> 2023/06/16-15:11:02.531  [_check_filetype@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:711]
+cmd :
+file fort.1.1
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.533  [local_shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:335]
+    ERROR : iret = 32512
+    +++ STANDARD OUTPUT:
+    sh: 1: file: not found
+    
+    +++ STANDARD ERROR:
+    
+    +++ END
+
+>>> 2023/06/16-15:11:02.533  [copyfileD@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:574]
+source list : ('/home/aster/shared/BIELA_MALLA.med',)
+destination : fort.20
+
+>>> 2023/06/16-15:11:02.534  [copyfileD@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:574]
+cmd :
+cp -L -r /home/aster/shared/BIELA_MALLA.med fort.20
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.540  [Shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> 7d9b8f8694eb and aster <> aster) ? False
+
+>>> 2023/06/16-15:11:02.540  [_check_filetype@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:711]
+cmd :
+file fort.20
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.542  [local_shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:335]
+    ERROR : iret = 32512
+    +++ STANDARD OUTPUT:
+    sh: 1: file: not found
+    
+    +++ STANDARD ERROR:
+    
+    +++ END
+
+>>> 2023/06/16-15:11:02.542  [copyfileD@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:574]
+source list : ('/home/aster/shared/RESULTADOS.med',)
+destination : fort.80
+
+>>> 2023/06/16-15:11:02.543  [copyfileD@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:574]
+cmd :
+cp -L -r /home/aster/shared/RESULTADOS.med fort.80
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.546  [Shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> 7d9b8f8694eb and aster <> aster) ? False
+
+>>> 2023/06/16-15:11:02.546  [_check_filetype@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:711]
+cmd :
+file fort.80
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.548  [local_shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:335]
+    ERROR : iret = 32512
+    +++ STANDARD OUTPUT:
+    sh: 1: file: not found
+    
+    +++ STANDARD ERROR:
+    
+    +++ END
+
+>>> 2023/06/16-15:11:02.548  [execute@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:103]
+version supports: waf (True), nosuperv (False), orbinitref (True), numthreads (True)
+
+>>> 2023/06/16-15:11:02.550  [Shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> 7d9b8f8694eb and aster <> aster) ? False
+
+>>> 2023/06/16-15:11:02.550  [execute@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:284]
+cmd :
+ls -la
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.556  [SetLimit@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:951]
+['core', 'RLIMIT_CORE', [-1, -1]]
+
+>>> 2023/06/16-15:11:02.556  [execute@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:345]
+source list : ('fort.1.1',)
+destination : fort.1
+
+>>> 2023/06/16-15:11:02.556  [execute@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:345]
+cmd :
+cp -L -r fort.1.1 fort.1
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:02.559  [Shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> 7d9b8f8694eb and aster <> aster) ? False
+
+>>> 2023/06/16-15:11:02.560  [execute@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:377]
+cmd :
+( /home/aster/aster/14.4/bin/aster /home/aster/aster/14.4/lib/aster/Execution/E_SUPERV.py -commandes fort.1 --num_job=767 --mode=interactif --rep_outils=/home/aster/aster/outils --rep_mat=/home/aster/aster/14.4/share/aster/materiau --rep_dex=/home/aster/aster/14.4/share/aster/datg --numthreads=3 --suivi_batch --tpmax=900.0 --memjeveux=875.0 ; echo EXECUTION_CODE_ASTER_EXIT_767=$? ) | tee fort.6 ; exit `grep -a EXECUTION_CODE_ASTER_EXIT_767 fort.6 | head -1 | sed -e 's/EXECUTION_CODE_ASTER_EXIT_767=//'`
+background : False
+follow_output : True
+
+>>> 2023/06/16-15:11:07.198  [local_shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:335]
+    ERROR : iret = 139
+    +++ STANDARD OUTPUT:
+    # ------------------------------------------------------------------------------------------
+    # Impression du contenu du fichier de commandes à exécuter :
+    # ------------------------------------------------------------------------------------------
+    DEBUT(LANG='EN')
+    
+    
+    mesh = LIRE_MAILLAGE(identifier=u'0:1',
+                         UNITE=20)
+    
+    model = AFFE_MODELE(identifier=u'1:1',
+                        AFFE=_F(MODELISATION=('3D', ),
+                                PHENOMENE='MECANIQUE',
+                                TOUT='OUI'),
+                        MAILLAGE=mesh)
+    
+    mater = DEFI_MATERIAU(identifier=u'2:1',
+                          ELAS=_F(E=2700000000.0,
+                                  NU=0.3,
+                                  RHO=7850.0))
+    
+    fieldmat = AFFE_MATERIAU(identifier=u'3:1',
+                             AFFE=_F(MATER=(mater, ),
+                                     TOUT='OUI'),
+                             MAILLAGE=mesh,
+                             MODELE=model)
+    
+    load = AFFE_CHAR_MECA(identifier=u'4:1',
+                          DDL_IMPO=(_F(DX=0.0,
+                                       DY=0.0,
+                                       DZ=0.0,
+                                       GROUP_NO=('FIXED1', )),
+                                    _F(DX=0.0,
+                                       DZ=0.0,
+                                       GROUP_NO=('FIXED2', )),
+                                    _F(DZ=0.0,
+                                       GROUP_NO=('LAST_FIXED', ))),
+                          MODELE=model,
+                          PESANTEUR=_F(DIRECTION=(-0.19, 0.0, -0.98),
+                                       GRAVITE=7052.5))
+    
+    Grav2 = AFFE_CHAR_MECA(identifier=u'5:1',
+                           MODELE=model,
+                           PESANTEUR=_F(DIRECTION=(0.19, 0.0, 0.98),
+                                        GRAVITE=7052.5))
+    
+    reslin = MECA_STATIQUE(identifier=u'6:1',
+                           CHAM_MATER=fieldmat,
+                           EXCIT=(_F(CHARGE=load),
+                                  _F(CHARGE=Grav2)),
+                           MODELE=model)
+    
+    unnamed = CALC_CHAMP(identifier=u'7:1',
+    #                     CONTRAINTE=('SIEF_ELGA', ),
+    #                     DEFORMATION=('EPME_ELNO', ),
+                         FORCE=('FORC_NODA', 'REAC_NODA'),
+                         RESULTAT=reslin)
+    
+    IMPR_RESU(identifier=u'8:1',
+    		RESU=_F(
+    		RESULTAT=reslin
+    		),
+              FORMAT='MED',
+              INFO=2,
+              UNITE=80)
+    
+    FIN()
+    
+    # ------------------------------------------------------------------------------------------
+    
+      Ouverture en écriture du fichier ./vola.1
+    
+     <INFO> Démarrage de l'exécution.
+                                                                                    
+                                                                                    
+            -- CODE_ASTER -- VERSION : DÉVELOPPEMENT STABILISÉE (testing) --        
+                                                                                    
+                         Version 14.4.0 modifiée le 28/06/2019                      
+                       révision 9aa55c3f2e9e - branche 'default'                    
+                             Copyright EDF R&D 1991 - 2023                          
+                                                                                    
+                        Exécution du : Fri Jun 16 15:11:02 2023                     
+                            Nom de la machine : 7d9b8f8694eb                        
+                                  Architecture : 64bit                              
+                              Type de processeur : x86_64                           
+    Système d'exploitation : Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-Ubuntu-18.04-bionic
+                            Langue des messages : en (UTF-8)                        
+                                                                                    
+                               Version de Python : 3.6.8                            
+                               Version de NumPy : 1.13.3                            
+       
+       !------------------------------------------------------------------------------------!
+       ! <A> <SUPERVIS2_2>                                                                  !
+       !                                                                                    !
+       !     Vous utilisez une vieille version de Code_Aster.                               !
+       !                                                                                    !
+       !     En mettant à jour votre version, vous bénéficierez des dernières améliorations !
+       !     apportées au code depuis 15 mois.                                              !
+       !     Si vous avez des développements privés, vous risquez d'avoir un travail        !
+       !     important de portage si vous ne suivez pas les mises à jour.                   !
+       !                                                                                    !
+       !                                                                                    !
+       ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                     !
+       ! alarme, vous pouvez obtenir des résultats inattendus !                             !
+       !------------------------------------------------------------------------------------!
+       
+                               Parallélisme MPI : inactif                           
+                              Parallélisme OpenMP : actif                           
+                            Nombre de processus utilisés : 3                        
+                         Version de la librairie HDF5 : 1.10.3                      
+                          Version de la librairie MED : 4.0.0                       
+                           Librairie MFront : non disponible                        
+                         Version de la librairie MUMPS : 5.1.2                      
+                            Librairie PETSc : non disponible                        
+                         Version de la librairie SCOTCH : 6.0.4                     
+    
+                      Mémoire limite pour l'exécution : 7000.00 Mo                  
+                       consommée par l'initialisation : 308.39 Mo                   
+                      par les objets du jeu de commandes : 1.28 Mo                  
+                     reste pour l'allocation dynamique : 6690.33 Mo                 
+                    Taille limite des fichiers d'échange : 48.00 Go                 
+                                                                                    
+    
+    .. __stg1_txt1
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0001            Concept de type : -
+      # ------------------------------------------------------------------------------------------
+      DEBUT(LANG='EN',
+            PAR_LOT='OUI',
+            IMPR_MACRO='NON',
+            DEBUG=_F(JXVERI='NON',
+                     SDVERI='NON',
+                     JEVEUX='NON',
+                     HIST_ETAPE='NON',),
+            MESURE_TEMPS=_F(NIVE_DETAIL=1,
+                            MOYENNE='NON',),
+            MEMOIRE=_F(TAILLE_BLOC=800.0,
+                       TAILLE_GROUP_ELEM=1000,),
+            RESERVE_CPU=_F(BORNE=900,),
+            INFO=1,)
+    
+    
+      Valeur initiale du temps CPU maximum =   900 secondes
+      Valeur du temps CPU maximum passé aux commandes =   810 secondes
+      Réserve CPU prévue = 90 secondes
+    
+      Ouverture en écriture du fichier ./glob.1
+    
+      Ouverture en écriture du fichier ./vola.1
+    
+      Ouverture en lecture du fichier /home/aster/aster/14.4/lib/aster/elem.1
+    
+         Nom de la base                          :  ELEMBASE
+         Créée avec la version                   :  14.04.00
+         Nombre d'enregistrements utilisés       :  43
+         Nombre d'enregistrements maximum        :  512
+         Longueur d'enregistrement (octets)      :  819200
+         Nombre d'identificateurs utilisés       :  123
+         Taille maximum du répertoire            :  300
+         Pourcentage d'utilisation du répertoire :  41 %
+    
+      Ouverture en lecture du fichier /home/aster/aster/14.4/lib/aster/elem.1
+    
+    
+         Nom de la base                          :  ELEMBASE
+         Nombre d'enregistrements utilisés       :  43
+         Nombre d'enregistrements maximum        :  512
+         Longueur d'enregistrement (octets)      :  819200
+         Nombre total d'accès en lecture         :  60
+         Volume des accès en lecture             :         46.88 Mo.
+         Nombre total d'accès en écriture        :  0
+         Volume des accès en écriture            :          0.00 Mo.
+         Nombre d'identificateurs utilisés       :  123
+         Taille maximum du répertoire            :  300
+         Pourcentage d'utilisation du répertoire :  41 %
+    
+      Relecture des catalogues des éléments faite.
+    
+      Fin de lecture (durée  0.024905  s.) 
+      # Mémoire (Mo) :   354.22 /   346.48 /    44.30 /    22.92 (VmPeak / VmSize / Optimum / Minimum)
+      # Fin commande No : 0001   user+syst:        0.03s (syst:        0.02s, elaps:        0.04s)
+      # ------------------------------------------------------------------------------------------
+    
+    .. __stg1_cmd0:1
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0002            Concept de type : maillage_sdaster
+      # ------------------------------------------------------------------------------------------
+      mesh = LIRE_MAILLAGE(UNITE=20,
+                           INFO_MED=1,
+                           FORMAT='MED',
+                           VERI_MAIL=_F(VERIF='OUI',
+                                        APLAT=1.E-3,),
+                           INFO=1,)
+    
+    Vérification du maillage.
+    
+    ------------ MAILLAGE mesh     - IMPRESSIONS NIVEAU  1 ------------
+    
+    VE-16-JUIN-2023 15:11:02                                                        
+    
+    NOMBRE DE NOEUDS                       29449
+    
+    NOMBRE DE MAILLES                     159346
+                                  SEG2                 5991
+                                  TRIA3               38462
+                                  TETRA4             114893
+    
+    NOMBRE DE GROUPES DE NOEUDS                3
+                                  FIXED1                               1
+                                  FIXED2                               1
+                                  LAST_FIXED                           1
+    
+    NOMBRE DE GROUPES DE MAILLES               5
+                                  PC2                                182
+                                  PC3                                181
+                                  PC1                                175
+                                  BODY_BIELA                      114893
+                                  PC4                                186
+    
+    --------------------------------------------------------------------------------
+    
+      # Mémoire (Mo) :   372.62 /   361.88 /    61.71 /    33.17 (VmPeak / VmSize / Optimum / Minimum)
+      # Fin commande No : 0002   user+syst:        0.27s (syst:        0.02s, elaps:        0.27s)
+      # ------------------------------------------------------------------------------------------
+    
+    .. __stg1_cmd1:1
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0004            Concept de type : modele_sdaster
+      # ------------------------------------------------------------------------------------------
+      model = AFFE_MODELE(MAILLAGE=mesh,
+                          AFFE=_F(TOUT='OUI',
+                                  PHENOMENE='MECANIQUE',
+                                  MODELISATION=('3D', ),),
+                          INFO=1,
+                          DISTRIBUTION=_F(PARTITIONNEUR='METIS',
+                                          METHODE='SOUS_DOMAINE',),
+                          VERI_JACOBIEN='OUI',)
+    
+    
+    Sur les 159346 mailles du maillage mesh, on a demandé l'affectation de 159346, on a pu en affecter 159346
+     Modélisation     Type maille  Élément fini     Nombre
+                      SEG2         MECA_ARETE2      5991
+                      TRIA3        MECA_FACE3       38462
+     3D               TETRA4       MECA_TETRA4      114893
+    #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.11      0.04      0.05
+      # Mémoire (Mo) :   486.78 /   481.17 /    62.62 /    52.12 (VmPeak / VmSize / Optimum / Minimum)
+      # Fin commande No : 0004   user+syst:        0.29s (syst:        0.13s, elaps:        0.12s)
+      # ------------------------------------------------------------------------------------------
+    
+    .. __stg1_cmd2:1
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0005            Concept de type : mater_sdaster
+      # ------------------------------------------------------------------------------------------
+      mater = DEFI_MATERIAU(ELAS=_F(E=2.700000000E9,
+                                    NU=0.3,
+                                    RHO=7850.0,
+                                    COEF_AMOR=1.0,),
+                            INFO=1,)
+    
+    Propriétés définies dans le matériau: ELAS.
+      # Mémoire (Mo) :   486.78 /   481.17 /    62.62 /    52.12 (VmPeak / VmSize / Optimum / Minimum)
+      # Fin commande No : 0005   user+syst:        0.01s (syst:        0.00s, elaps:        0.00s)
+      # ------------------------------------------------------------------------------------------
+    
+    .. __stg1_cmd3:1
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0006            Concept de type : cham_mater
+      # ------------------------------------------------------------------------------------------
+      fieldmat = AFFE_MATERIAU(MAILLAGE=mesh,
+                               MODELE=model,
+                               AFFE=_F(TOUT='OUI',
+                                       MATER=(mater, ),),
+                               INFO=1,)
+    
+      # Mémoire (Mo) :   486.78 /   481.17 /    62.62 /    52.12 (VmPeak / VmSize / Optimum / Minimum)
+      # Fin commande No : 0006   user+syst:        0.00s (syst:        0.00s, elaps:        0.00s)
+      # ------------------------------------------------------------------------------------------
+    
+    .. __stg1_cmd4:1
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0007            Concept de type : char_meca
+      # ------------------------------------------------------------------------------------------
+      load = AFFE_CHAR_MECA(MODELE=model,
+                            PESANTEUR=_F(GRAVITE=7052.5,
+                                         DIRECTION=(-0.19, 0.0, -0.98),),
+                            DDL_IMPO=(_F(GROUP_NO=('FIXED1', ),
+                                         DX=0.0,
+                                         DY=0.0,
+                                         DZ=0.0,),
+                                      _F(GROUP_NO=('FIXED2', ),
+                                         DX=0.0,
+                                         DZ=0.0,),
+                                      _F(GROUP_NO=('LAST_FIXED', ),
+                                         DZ=0.0,),
+                                      ),
+                            VERI_NORM='OUI',
+                            DOUBLE_LAGRANGE='OUI',
+                            INFO=1,)
+    
+      # Mémoire (Mo) :   486.78 /   482.51 /    62.62 /    52.12 (VmPeak / VmSize / Optimum / Minimum)
+      # Fin commande No : 0007   user+syst:        0.04s (syst:        0.01s, elaps:        0.04s)
+      # ------------------------------------------------------------------------------------------
+    
+    .. __stg1_cmd5:1
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0008            Concept de type : char_meca
+      # ------------------------------------------------------------------------------------------
+      Grav2 = AFFE_CHAR_MECA(MODELE=model,
+                             PESANTEUR=_F(GRAVITE=7052.5,
+                                          DIRECTION=(0.19, 0.0, 0.98),),
+                             VERI_NORM='OUI',
+                             DOUBLE_LAGRANGE='OUI',
+                             INFO=1,)
+    
+      # Mémoire (Mo) :   486.78 /   482.51 /    62.62 /    52.12 (VmPeak / VmSize / Optimum / Minimum)
+      # Fin commande No : 0008   user+syst:        0.02s (syst:        0.00s, elaps:        0.03s)
+      # ------------------------------------------------------------------------------------------
+    
+    .. __stg1_cmd6:1
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0009            Concept de type : evol_elas
+      # ------------------------------------------------------------------------------------------
+      reslin = MECA_STATIQUE(MODELE=model,
+                             CHAM_MATER=fieldmat,
+                             EXCIT=(_F(CHARGE=load,
+                                       TYPE_CHARGE='FIXE_CSTE',),
+                                    _F(CHARGE=Grav2,
+                                       TYPE_CHARGE='FIXE_CSTE',),
+                                    ),
+                             OPTION='SIEF_ELGA',
+                             SOLVEUR=_F(RENUM='AUTO',
+                                        NPREC=8,
+                                        ELIM_LAGR='LAGR2',
+                                        STOP_SINGULIER='OUI',
+                                        TYPE_RESOL='AUTO',
+                                        ACCELERATION='AUTO',
+                                        LOW_RANK_SEUIL=0.0,
+                                        PRETRAITEMENTS='AUTO',
+                                        POSTTRAITEMENTS='AUTO',
+                                        PCENT_PIVOT=20,
+                                        RESI_RELA=1.E-06,
+                                        GESTION_MEMOIRE='AUTO',
+                                        MATR_DISTRIBUEE='NON',
+                                        METHODE='MUMPS',),
+                             INFO=1,)
+    
+      Le système linéaire à résoudre a 88359 degrés de liberté:
+       - 88347 sont des degrés de liberté physiques
+         (ils sont portés par 29449 noeuds du maillage)
+       - 12 sont les couples de paramètres de Lagrange associés
+         aux 6 relations linéaires dualisées.
+      La matrice est de taille 88359 équations.
+      Elle contient 1648950 termes non nuls si elle est symétrique et 3209541 termes non nuls si elle n'est pas symétrique.
+      Soit un taux de remplissage de   0.041 %.
+        Champ stocké <DEPL> à l'instant  0.000000000000e+00 pour le numéro d'ordre 1
+    #1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      5.29      0.90      2.33
+    #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      1.53      0.24      1.16
+      # Mémoire (Mo) :  1350.97 /   515.73 /   151.65 /    68.49 (VmPeak / VmSize / Optimum / Minimum)
+      # Fin commande No : 0009   user+syst:        6.87s (syst:        1.15s, elaps:        3.55s)
+      # ------------------------------------------------------------------------------------------
+    
+    .. __stg1_cmd7:1
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0010            Concept de type : evol_elas
+      # ------------------------------------------------------------------------------------------
+      unnamed = CALC_CHAMP(RESULTAT=reslin,
+                           PRECISION=1.E-06,
+                           FORCE=('FORC_NODA', 'REAC_NODA'),
+                           CRITERE='RELATIF',
+                           INFO=1,)
+    
+      Le système linéaire à résoudre a 88359 degrés de liberté:
+       - 88347 sont des degrés de liberté physiques
+         (ils sont portés par 29449 noeuds du maillage)
+       - 12 sont les couples de paramètres de Lagrange associés
+         aux 6 relations linéaires dualisées.
+    Segmentation fault (core dumped)
+    EXECUTION_CODE_ASTER_EXIT_767=139
+    
+    +++ STANDARD ERROR:
+    
+    +++ END
+
+>>> 2023/06/16-15:11:07.201  [_diag_erre@/home/aster/aster/lib/python3.6/site-packages/asrun/build.py:1499]
+n_debut=1, n_fin=0, mess=False : ok=False
+
+>>> 2023/06/16-15:11:07.201  [_diag_erre@/home/aster/aster/lib/python3.6/site-packages/asrun/build.py:1500]
+alarm=True, errs=False, fatal=False, exitcode=139
+
+>>> 2023/06/16-15:11:07.201  [getDiag@/home/aster/aster/lib/python3.6/site-packages/asrun/build.py:1213]
+Fichier : fort.6
+_diag_erre : None
+
+>>> 2023/06/16-15:11:07.202  [Mess@/home/aster/aster/lib/python3.6/site-packages/asrun/run.py:639]
+Warning or error raised :
+<E>_CORE_FILE Code_Aster run created a coredump
+Traceback:
+  File "<string>", line 1, in <module>
+  File "/home/aster/aster/lib/python3.6/site-packages/asrun/main.py", line 109, in main
+    start()
+  File "/home/aster/aster/lib/python3.6/site-packages/asrun/main.py", line 92, in start
+    meth(run, *args)
+  File "/home/aster/aster/lib/python3.6/site-packages/asrun/execute.py", line 447, in RunAster
+    run=run, conf=conf, prof=prof, build=build, exe=exetmp)
+  File "/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py", line 477, in execute
+    '<E>_CORE_FILE')
+  File "/home/aster/aster/lib/python3.6/site-packages/asrun/run.py", line 639, in Mess
+    print_traceback=True)
+  File "/home/aster/aster/lib/python3.6/site-packages/asrun/run.py", line 817, in DBG
+    stack_id=stack_id, all=all, prefix=prefix, *args)
+  File "/home/aster/aster/lib/python3.6/site-packages/asrun/run.py", line 773, in _printDBG
+    stack = traceback.format_stack(limit=10)
+
+
+
+>>> 2023/06/16-15:11:07.202  [Shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> 7d9b8f8694eb and aster <> aster) ? False
+
+>>> 2023/06/16-15:11:07.202  [execute@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:488]
+cmd :
+unset PYTHONHOME; unset PYTHONPATH; /usr/bin/gdb -batch --command=dbg_cmdfile /home/aster/aster/14.4/bin/aster core
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:07.205  [local_shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:335]
+    ERROR : iret = 32512
+    +++ STANDARD OUTPUT:
+    sh: 1: /usr/bin/gdb: not found
+    
+    +++ STANDARD ERROR:
+    
+    +++ END
+
+>>> 2023/06/16-15:11:07.205  [Shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> 7d9b8f8694eb and aster <> aster) ? False
+
+>>> 2023/06/16-15:11:07.205  [execute@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:496]
+cmd :
+ls -la . REPE_OUT
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:07.211  [copyfileR@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:673]
+source list : ('fort.20',)
+destination : /home/aster/shared/BIELA_MALLA.med
+
+>>> 2023/06/16-15:11:07.211  [copyfileR@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:673]
+cmd :
+cp -L -r fort.20 /home/aster/shared/BIELA_MALLA.med
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:07.219  [copyfileR@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:673]
+source list : ('fort.6',)
+destination : /home/aster/shared/message
+
+>>> 2023/06/16-15:11:07.220  [copyfileR@/home/aster/aster/lib/python3.6/site-packages/asrun/execution.py:673]
+cmd :
+cp -L -r fort.6 /home/aster/shared/message
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:07.224  [Mess@/home/aster/aster/lib/python3.6/site-packages/asrun/run.py:639]
+Warning or error raised :
+<F>_ABNORMAL_ABORT Code_Aster run ended
+Traceback:
+  File "<string>", line 1, in <module>
+  File "/home/aster/aster/lib/python3.6/site-packages/asrun/main.py", line 109, in main
+    start()
+  File "/home/aster/aster/lib/python3.6/site-packages/asrun/main.py", line 92, in start
+    meth(run, *args)
+  File "/home/aster/aster/lib/python3.6/site-packages/asrun/execute.py", line 461, in RunAster
+    run.Mess(_('Code_Aster run ended'), diag)
+  File "/home/aster/aster/lib/python3.6/site-packages/asrun/run.py", line 639, in Mess
+    print_traceback=True)
+  File "/home/aster/aster/lib/python3.6/site-packages/asrun/run.py", line 817, in DBG
+    stack_id=stack_id, all=all, prefix=prefix, *args)
+  File "/home/aster/aster/lib/python3.6/site-packages/asrun/run.py", line 773, in _printDBG
+    stack = traceback.format_stack(limit=10)
+
+
+
+>>> 2023/06/16-15:11:07.225  [Shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> 7d9b8f8694eb and aster <> aster) ? False
+
+>>> 2023/06/16-15:11:07.225  [_clear_tmp@/home/aster/aster/lib/python3.6/site-packages/asrun/run.py:483]
+cmd :
+\rm -rf /tmp/aster-f3fd93e590e8-interactif_29
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:08.069  [Shell@/home/aster/aster/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> 7d9b8f8694eb and aster <> aster) ? False
+
+>>> 2023/06/16-15:11:08.112  [_clear_tmp@/home/aster/aster/lib/python3.6/site-packages/asrun/run.py:483]
+cmd :
+\rm -rf /tmp/astk_aster/aster-7d9b8f8694eb-profil_astk_767
+background : False
+follow_output : False
+
+>>> 2023/06/16-15:11:08.116  [Sortie@/home/aster/aster/lib/python3.6/site-packages/asrun/run.py:732]
+exit 4
